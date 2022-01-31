@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+  .page-header
+    h3 Add a stock
+    hr
+  form.form-horizontal(id='add-stock-form', method='POST')
+    input(type='hidden', name='_csrf', value=_csrf)
+    .form-group.row.justify-content-md-center
+      label.col-sm-3.col-form-label.text-right.font-weight-bold(for='ticker') Ticker
+      .col-sm-7
+        input.form-control(type='ticker', name='ticker', id='ticker', placeholder='Ticker', autofocus, required)
+    .form-group.row.justify-content-md-center
+      label.col-sm-3.col-form-label.text-right.font-weight-bold(for='start price') Start price(optional)
+      .col-sm-7
+        input.form-control(type='price', name='price', id='price', placeholder='Price')
+    .form-group.row.justify-content-md-center
+      .offset-sm-3.col-sm-7
+        button.btn.btn-success(type='submit')
+          i.fa.fa-user-plus
+          | Add stock

@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+  .page-header
+    h3 Remove a stock
+    hr
+  form.form-horizontal(id='remove-stock-form', method='POST')
+    input(type='hidden', name='_csrf', value=_csrf)
+    .form-group.row.justify-content-md-center
+      label.col-sm-3.col-form-label.text-right.font-weight-bold(for='ticker') Ticker
+      .col-sm-7
+        input.form-control(type='ticker', name='ticker', id='ticker', placeholder='Ticker', autofocus, required)
+    .form-group.row.justify-content-md-center
+      .offset-sm-3.col-sm-7
+        button.btn.btn-success(type='submit')
+          i.fa.fa-user-plus
+          | Remove a stock 
+      

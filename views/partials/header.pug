@@ -1,0 +1,17 @@
+nav.navbar.navbar-expand-lg.navbar-light.bg-light.fixed-top
+  .container
+    a.navbar-brand(href='/')
+      i.fa.fa-bar-chart
+      | TechSocial
+    .collapse.navbar-collapse
+      .dropdown-divider
+      ul.nav.navbar-nav.mr-auto
+        li.nav-item(class=(title === 'Admin View') ? 'active' : undefined)
+          a.nav-link(href='/adminview') Admin View
+        li.nav-item(class=(title === 'addStock') ? 'active' : undefined)
+          a.nav-link(href='/addStock') Add Stock
+        li.nav-item(class=(title === 'removeStock') ? 'active' : undefined)
+          a.nav-link(href='/removeStock') Remove Stock
+
+          
+

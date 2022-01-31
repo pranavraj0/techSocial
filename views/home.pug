@@ -1,0 +1,12 @@
+extends layout
+block content
+  h1 Welome to Tech Social
+  p.lead Use your chips wisely!
+  head
+    meta(http-equiv="refresh" content="5")   
+    script(type='text/javascript' src='https://canvasjs.com/assets/script/jquery-1.11.1.min.js')
+    script(type='text/javascript' src='https://canvasjs.com/assets/script/canvasjs.stock.min.js')
+    script(src='/js/lib/SimpleChart.js')
+  for result in stocks
+    div(id=result.ticker,style='width: 33%; height: 250px;display: inline-block;')
+
